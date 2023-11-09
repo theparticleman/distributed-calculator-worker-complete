@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedCalculatorWorker.UnitTests", "DistributedCalculatorWorker.UnitTests\DistributedCalculatorWorker.UnitTests.csproj", "{ABA05480-7AC6-4069-B812-DB322F19BCA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistributedCalculatorWorker.Web", "DistributedCalculatorWorker.Web\DistributedCalculatorWorker.Web.csproj", "{53EB3C68-A147-415C-A47E-0969A3E3EAB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABA05480-7AC6-4069-B812-DB322F19BCA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABA05480-7AC6-4069-B812-DB322F19BCA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABA05480-7AC6-4069-B812-DB322F19BCA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABA05480-7AC6-4069-B812-DB322F19BCA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53EB3C68-A147-415C-A47E-0969A3E3EAB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53EB3C68-A147-415C-A47E-0969A3E3EAB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53EB3C68-A147-415C-A47E-0969A3E3EAB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53EB3C68-A147-415C-A47E-0969A3E3EAB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

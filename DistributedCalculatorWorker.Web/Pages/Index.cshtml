@@ -1,0 +1,55 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>Register This Worker</h1>
+
+<div style="display: flex; flex-direction: column; gap: 16px;">
+    <div>
+        <label for="registrationurl">Registration URL</label>
+        <input id="registrationurl" value="http://localhost/register" />
+    </div>
+    <div>
+        <label for="workerid">Worker ID</label>
+        <input id="workerid" />
+    </div>
+    <div>
+        <label for="teamname">Team Name</label>
+        <input id="teamname" value="Jon's Example" />
+    </div>
+    <div>
+        <label for="createjobendpoint">Create Job Endpoint</label>
+        <input id="createjobendpoint" />
+    </div>
+    <div>
+        <label for="errorcheckendpoint">Error Check Endpoint</label>
+        <input id="errorcheckendpoint" />
+    </div>
+    <button style="width: fit-content;" onclick="register()">Register</button>
+</div>
+
+<script>
+    document.getElementById("workerid").value = crypto.randomUUID()
+    document.getElementById("createjobendpoint").value = `${location.origin}/api/create`
+    document.getElementById("errorcheckendpoint").value = `${location.origin}/api/check`
+
+    function register() {
+        const body = {
+            registrationUrl : document.getElementById("registrationurl").value,
+            workerId : document.getElementById("workerid").value,
+            teamName: document.getElementById("teamname").value,
+            createJobEndpoint: document.getElementById("createjobendpoint").value,
+            errorCheckEndpoint: document.getElementById("errorcheckendpoint").value,
+        }
+
+        fetch("/api/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(body),
+        })
+    }
+</script>
